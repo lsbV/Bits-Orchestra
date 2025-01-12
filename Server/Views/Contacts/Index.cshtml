@@ -1,0 +1,87 @@
+﻿<form asp-action="Post" method="post" enctype="multipart/form-data">
+    <input type="file" name="csv" />
+
+    <button type="submit" class="inactive">Add</button>
+</form>
+<div>
+    <h3>Sort</h3>
+    <div>
+        <span>By</span>
+        <input id="name" type="radio" name="sort-by" value="Name"/>
+        <label for="name">Name</label>
+        <input id="dateOfBirth" type="radio" name="sort-by" value="DateOfBirth"/>
+        <label for="dateOfBirth">Date of birth</label>
+        <input id="married" type="radio" name="sort-by" value="Married"/>
+        <label for="married">Married</label>
+        <input id="phone" type="radio" name="sort-by" value="Phone"/>
+        <label for="phone">Phone</label>
+        <input id="salary" type="radio" name="sort-by" value="Salary"/>
+        <label for="salary">Salary</label>
+    </div>
+    <div>
+        <span>Direction</span>
+        <input id="asc" type="radio" name="sort-order" value="Asc" checked/>
+        <label for="asc">Asc</label>
+        <input id="desc" type="radio" name="sort-order" value="Desc"/>
+        <label for="desc">Desc</label>
+
+    </div>
+
+    <div class="filters">
+        <h3>Filters</h3>
+
+        <div>
+            <label for="filter-name">Name</label>
+            <input id="filter-name"/>
+        </div>
+        <div>
+            <label for="filter-date-of-birth">Date of birth</label>
+            <input type="date" id="filter-date-of-birth"/>
+        </div>
+        <div>
+            <span>Married</span>
+            <input id="married-yes" type="radio" name="married" value="yes" />
+            <label for="married-yes">Yes</label>
+            <input id="married-no" type="radio" name="married" value="no" />
+            <label for="married-no">No</label>
+            <input id="married-all" type="radio" name="married" value="all" checked />
+            <label for="married-all">All</label>
+        </div>
+        <div>
+            <label for="filter-phone">Phone</label>
+            <input id="filter-phone"/>
+        </div>
+
+        <div>
+            <label for="filter-salary">Salary</label>
+            <input id="filter-salary"/>
+        </div>
+    </div>
+    <span>Page size</span>
+    <select id="pageSize">
+        <option value="3">3</option>
+        <option value="5" selected>5</option>
+        <option value="10">10</option>
+        <option value="25">25</option>
+        <option value="100">100</option>
+
+    </select>
+
+</div>
+<table id="contactsTable" class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Date of birth</th>
+            <th>Married</th>
+            <th>Phone</th>
+            <th>Salary</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+<div class="pagination">
+</div>
+<script src="js/contact-script.js" type="module"></script>

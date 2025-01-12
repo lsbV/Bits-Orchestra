@@ -1,0 +1,5 @@
+Name,DateOfBirth,Married,Phone,Salary
+John Doe,1980-01-01,true,1234567890,1000
+Jane Doe,1985-01-01,false,1234567890,2000
+Sammy Doe,1990-01-01,true,1234567890,3000
+Sally Doe,1995-01-01,false,1234567890,4000
